@@ -1,0 +1,13 @@
+version: "3.0"
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:8080"
+      - "2345:2345"
+    security_opt:
+      - "seccomp:unconfined"
+    tty: true
+    stdin_open: true
+    command: dlv debug --headless --listen=:2345 --api-version=2 --log ./cmd/web/main.go
