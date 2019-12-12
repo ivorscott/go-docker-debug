@@ -5,11 +5,18 @@ docker-compose up
 
 # - open up the debug tab in VSCODE
 # - then click "Launch remote"
-# - set some breakpoints in the main function
+# - set some breakpoints in the main function (give conditional breakpoints a try)
 # - finally open the browser the localhost:8080
 
 docker-compose down
 ```
+
+## Go Docs
+
+You can run the official go docs offline, and generate your custom project's docs alongside it. It use to be easy but something broke with the inclusion of go modules: https://github.com/golang/go/issues/26827
+
+However, I managed to fixed this with docker.
+See: http://localhost:3000/pkg/github.com/ivorscott/go-docker-debug/example/#example_Hello
 
 ## VSCODE Configuration
 
