@@ -11,3 +11,11 @@ services:
     tty: true
     stdin_open: true
     command: dlv debug --headless --listen=:2345 --api-version=2 --log ./cmd/web/main.go
+
+  godocs:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/go/src/$MODULE
+    command: "bash -c 'echo http://localhost:3000/pkg/$MODULE && /go/bin/godoc -http=:3000'"
