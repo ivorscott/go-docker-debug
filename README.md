@@ -6,7 +6,7 @@ docker-compose up
 # - open up the debug tab in VSCODE
 # - then click "Launch remote"
 # - set some breakpoints in the main function (give conditional breakpoints a try)
-# - finally open the browser the localhost:8080
+# - finally open the browser to localhost:8080
 
 docker-compose down
 ```
